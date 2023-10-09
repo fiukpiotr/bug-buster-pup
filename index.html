@@ -25,25 +25,39 @@
   </audio>
 
   <div class="container">
-    <button id="startButton">START</button>
-    <canvas id="canvas1"></canvas>
-    <!-- <div class="instructions">
+    <button id="startButton">
+      START
       <p class="title">Instructions:</p>
       <p class="discription">
-        Every time monster got you - you loose 5 points. 
+        Every time monster got you - you loose 5 points.<br> 
         You have '30 seconds. Kill minimum 40 monsters or loose.<br>
       </p>
         
-      <ul>
-        <li>'Arrow Up' - jump</li>
-        <li>'Arrow Down' - sit</li>
-        <li>'Arrow Left' - left</li>
-        <li>'Arrow Right' - right</li>
-        <li>'Ctrl' - fire attack</li>
-        <li>'Arrow Down' while jumping - special attack</li>
-        <li>'F5' - restart game</li>
-      </ul>
-    </div> -->
+      <div class="grid-container">
+        <div><img src="assets/images/controls/arrow-up.png" alt="Arrow Up"></div>
+        <div>jump</div>
+        
+        <div><img src="assets/images/controls/arrow-down.png" alt="Arrow Down"></div>
+        <div>sit</div>
+        
+        <div><img src="assets/images/controls/arrow-left.png" alt="Arrow Left"></div>
+        <div>move left</div>
+        
+        <div><img src="assets/images/controls/arrow-right.png" alt="Arrow Right"></div>
+        <div>move right</div>
+        
+        <div><img src="assets/images/controls/CTRL.png" alt="Ctrl"></div>
+        <div>fire attack</div>
+        
+        <div class="special-attack"><img src="assets/images/controls/arrow-up.png" alt="Arrow Up"><span>  +  </span><img src="assets/images/controls/arrow-down.png" alt="Arrow Down"></div>
+        <div>special attack <b style="color: green">+5 POINTS</b></div>
+        
+        <div><img src="assets/images/controls/F5.png" alt="F5"></div>
+        <div>restart game</div>
+      </div>
+      <p><b>Click 'Enter' to start.</b></p>
+    </button>
+    <canvas id="canvas1"></canvas>
   </div>
 
   <img id="player" src="assets/images/player/player.png">

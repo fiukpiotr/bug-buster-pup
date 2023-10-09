@@ -29,7 +29,7 @@ export class UI {
       context.textAlign = 'center';
       context.font = this.fontSize * 2 + 'px ' + this.fontFamily;
       if (this.game.score > this.game.winningScore) {
-        context.shadowColor = 'green';
+        context.shadowColor = 'white';
         context.fillText('Boo-yah!', this.game.width * 0.5, this.game.height * 0.5);
         context.font = this.fontSize * 0.7 + 'px ' + this.fontFamily;
         context.fillText('What are creatures of the night afraid of? YOU!!!', this.game.width * 0.5 + 2, this.game.height * 0.5 + 40);

@@ -91,11 +91,13 @@ export default class Player {
           if (this.currentState === this.states[4] || this.currentState === this.states[5]){
             if (this.currentState === this.states[4]){
               collisionAnimation.playerHit();
+              this.game.score++;
+              this.game.floatingMessages.push(new FloatingMessage('+1', enemy.x, enemy.y, 150, 50))
             } else if (this.currentState === this.states[5]){
               collisionAnimation.specialAttackSound();
+              this.game.score += 5;
+              this.game.floatingMessages.push(new FloatingMessage('+5', enemy.x, enemy.y, 150, 50))
             }
-            this.game.score++;
-            this.game.floatingMessages.push(new FloatingMessage('+1', enemy.x, enemy.y, 150, 50))
           } else {
             collisionAnimation.enemyHit();
             this.setState(6, 0);

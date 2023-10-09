@@ -25,19 +25,46 @@ body {
   border: 5px solid black;
   border-radius: 15px;
   /* margin-top: clamp(38px, 25vw, 200px); */
-  margin-top: max(8px, min(25vh, 200px));
+  margin-top: max(0px, min(2vh, 200px));
   transition: 1s;
 }
 
 @media screen and (max-width: 500px) {
   #startButton {
-    margin-top: 38px;
+    margin-top: 0px;
   }
 }
 
 #startButton:hover {
   background-color: rgb(146, 0, 0);
   cursor: pointer;
+}
+
+p {
+  font-size: 0.8rem;
+  margin: 10px;
+}
+
+.grid-container {
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.special-attack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+
+img {
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #canvas1 {

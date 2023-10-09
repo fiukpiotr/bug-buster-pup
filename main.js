@@ -16,6 +16,7 @@ window.addEventListener('load', function(){
   gameOverSound.volume = 0.2;
   const startButton = document.getElementById('startButton');
   
+  
   class Game {
     constructor(width, height){
       this.width = width;
@@ -34,11 +35,12 @@ window.addEventListener('load', function(){
       this.floatingMessages = [];
       this.maxParticles = 200;
       this.enemyTimer = 0;
-      this.enemyInterval = Math.random() * 1000 + 600;
+      this.enemyInterval = Math.random() * 1000 + 500;
       this.debug = false;
       this.score = 0;
       this.winningScore = 40;
       this.fontColor = 'green';
+      this.startTime = new Date().getTime();
       this.time = 0;
       this.maxTime = 30000;
       this.isPlaying = false;
@@ -119,40 +121,45 @@ window.addEventListener('load', function(){
       this.enemies.push(new FlyingEnemy(this));
     }
   }
+
   
   const game = new Game(canvas.width, canvas.height);
   const targetFPS = 60;
   const frameDuration = 1000 / targetFPS;
   let lastTime = 0;
-
-  function animate(timeStamp){
-    const deltaTime = timeStamp - lastTime;
+  
+  function animate(timeStamp) {
+    let deltaTime = timeStamp - lastTime;
+    if (deltaTime > 30) {
+      deltaTime = 30;
+    }
     if (deltaTime >= frameDuration) {
       lastTime = timeStamp - (deltaTime % frameDuration);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       game.update(deltaTime);
       game.draw(ctx);
-    }
+    } 
     if (!game.gameOver) {
       requestAnimationFrame(animate);
     }
   }
 
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    if (startButton.style.display !== "none") {
-      game.isPlaying = true;
-      animate(0);
-      backgroundAudio.play();
-      startButton.style.display = "none";
-    }
-  }
-});
-
   startButton.addEventListener('click', function() {
+    game.time = 0;
     game.isPlaying = true;
-    animate(0);
     backgroundAudio.play();
     startButton.style.display = "none";
+    animate(0);
   });
+  
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        game.isPlaying = true;
+        backgroundAudio.play();
+        startButton.style.display = "none";
+        animate(0);
+    }
+  });
+
+
 });
