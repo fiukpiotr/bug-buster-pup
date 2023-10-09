@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica', cursive;
+}
+
+body { 
+  background: black ;
+}
+
+.container {
+  margin: 50px;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+#startButton {
+  font-family: 'Creepster', cursive;
+  font-size: 5rem;
+  position: absolute;
+  padding: 10px 15px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 15px;
+  /* margin-top: clamp(38px, 25vw, 200px); */
+  margin-top: max(8px, min(25vh, 200px));
+  transition: 1s;
+}
+
+@media screen and (max-width: 500px) {
+  #startButton {
+    margin-top: 38px;
+  }
+}
+
+#startButton:hover {
+  background-color: rgb(146, 0, 0);
+  cursor: pointer;
+}
+
+#canvas1 {
+  border: 5px solid black;
+  max-width: 100%;
+  max-height: 100%;
+  font-family: 'Creepster', cursive;
+  background-image:
+  url("assets/images/background/forest/layer-5.png"),
+  url("assets/images/background/forest/layer-4.png"),
+  url("assets/images/background/forest/layer-3.png"),
+  url("assets/images/background/forest/layer-2.png"),
+  url("assets/images/background/forest/layer-1.png");
+  background-size: cover;
+}
+
+#player, #fire, #lives,
+#layer1, #layer2, #layer3, #layer4, #layer5,
+#enemy_fly, #enemy_plant, #enemy_spider_big,
+#collisionAnimation {
+  display: none;
+}
+

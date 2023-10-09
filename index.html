@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bug Buster Pup: Spooky Showdown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <link rel="icon" href="D:\CODE\ROBOCZE\JavaScriptGameDevelopmentCourseForBeginners\PROJECT9-theGame\favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <audio id="background-audio" loop>
+    <source src="./assets/forest-loop.ogg" type="audio/ogg">
+  </audio>
+  <audio id="gameOverSound">
+    <source src="./assets/gameOver.wav" type="audio/wav">
+  </audio>
+  <audio id="winningSound">
+    <source src="./assets/win.ogg" type="audio/ogg">
+  </audio>
+
+  <div class="container">
+    <button id="startButton">START</button>
+    <canvas id="canvas1"></canvas>
+    <!-- <div class="instructions">
+      <p class="title">Instructions:</p>
+      <p class="discription">
+        Every time monster got you - you loose 5 points. 
+        You have '30 seconds. Kill minimum 40 monsters or loose.<br>
+      </p>
+        
+      <ul>
+        <li>'Arrow Up' - jump</li>
+        <li>'Arrow Down' - sit</li>
+        <li>'Arrow Left' - left</li>
+        <li>'Arrow Right' - right</li>
+        <li>'Ctrl' - fire attack</li>
+        <li>'Arrow Down' while jumping - special attack</li>
+        <li>'F5' - restart game</li>
+      </ul>
+    </div> -->
+  </div>
+
+  <img id="player" src="assets/images/player/player.png">
+  <img id="layer1" src="assets/images/background/forest/layer-1.png">
+  <img id="layer2" src="assets/images/background/forest/layer-2.png">
+  <img id="layer3" src="assets/images/background/forest/layer-3.png">
+  <img id="layer4" src="assets/images/background/forest/layer-4.png">
+  <img id="layer5" src="assets/images/background/forest/layer-5.png">
+  <img id="enemy_fly" src="assets/images/enemies/enemy_fly.png">
+  <img id="enemy_plant" src="assets/images/enemies/enemy_plant.png">
+  <img id="enemy_spider_big" src="assets/images/enemies/enemy_spider_big.png">
+  <img id="fire" src="assets/images/player/fire.png">
+  <img id="collisionAnimation" src="assets/images/enemies/boom.png">
+  <img id="lives" src="assets/images/heart.png">
+  
+  <script type="module" src="main.js"></script>
+</body>
+</html>
