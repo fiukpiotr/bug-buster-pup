@@ -7,8 +7,11 @@ The clock is ticking, and your reflexes will be put to the test as you transform
 <br><br>
 Can you channel your inner FlamePup and rise to the challenge? With its simple yet addictive gameplay, "FlamePup's Quest: Defend the Garden!" offers hours of fun and excitement. Are you ready to accept the canine guardian's mantle and protect the garden from the encroaching darkness? Play now and prove your mettle in this enchanting 2D adventure!
 <br><br>
+# PLAY GAME:
 <p align="center">
-<a href="https://fiukpiotr.github.io/bug-buster-pup/"><img src="assets\images\button.png" /></a>
+  <a href="https://fiukpiotr.github.io/bug-buster-pup/" target="_blank">
+    <img src="assets\images\button.png">
+  </a>
 </p>
 <ul>
   <li>'Arrow Up' - jump</li>
